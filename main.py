@@ -1,11 +1,4 @@
+from src.main.server.server import app
 
-
-def do_something():
-    minha_variavel = 123
-    print(minha_variavel)
-
-  
-def do_something3():
-    
-    minha_variavel = 123
-    print(minha_variavel)
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=3000)

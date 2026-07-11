@@ -1,0 +1,8 @@
+{
+    "fie.exclude": {
+        "**/*.pyc": {"when": "$(basename).py"},
+        "**/__pychace__*": true,
+        "**/*.pytest_cache": true,
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:system"
+}
