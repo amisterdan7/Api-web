@@ -1,4 +1,5 @@
 **/__pycache__
-.pytestcache
+.vscode/
+.pytest_cache
 venv
 schema.db
