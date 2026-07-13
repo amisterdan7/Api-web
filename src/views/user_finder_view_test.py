@@ -1,2 +1,0 @@
-import pytest
-from .user_finder_view import UserFinderInterface
