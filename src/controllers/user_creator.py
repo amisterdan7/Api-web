@@ -1,8 +1,7 @@
 from src.models.repository.interfaces.users_repository import UsersRepositoryInterfaces
+from .interfaces.user_creator import UserCreatorInterface
 
-
-# RuffE701
-class UserCreator:
+class UserCreator(UserCreatorInterface):
     def __init__(self, users_repository: UsersRepositoryInterfaces):  # Invenção da dependência - D SOLID
         self.__users_repo = users_repository
 

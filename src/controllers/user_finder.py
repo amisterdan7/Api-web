@@ -1,6 +1,6 @@
 from src.models.repository.interfaces.users_repository import UsersRepositoryInterfaces
-
-class UserFinder():
+from .interfaces.user_finder import UserFinderInterface
+class UserFinder(UserFinderInterface):
     def __init__(self, users_repository: UsersRepositoryInterfaces):
         self.__users_repo = users_repository
 
