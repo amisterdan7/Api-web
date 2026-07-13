@@ -8,7 +8,7 @@ class Users(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     person_name = Column(String, nullable=False)
     age = Column(Integer)
-    heigth = Column(Float)
+    height = Column(Float)
 
     def __repr__(self):
         return f"users [id={self.id}, person_name={self.person_name}]"

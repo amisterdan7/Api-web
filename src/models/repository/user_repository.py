@@ -1,18 +1,18 @@
 from src.models.connection.db_connection_handler import DbConnectionHandler
 from src.models.entities.users import Users
+from .interfaces.users_repository import UsersRepositoryInterfaces
 
-
-class UsersRepository:
+class UsersRepository(UsersRepositoryInterfaces):
     def __init__(self, db_conn_handler: DbConnectionHandler):
         self.__db_conn_handler = db_conn_handler
 
-    def insert_user(self, person_name: str, age: int, heigth: float) -> None:
+    def insert_user(self, person_name: str, age: int, height: float) -> None:
         with self.__db_conn_handler as database:
             try:
                 new_user = Users(
                     person_name=person_name, 
                     age=age, 
-                    heigth=heigth)
+                    height=height)
                 database.session.add(new_user)
                 database.session.commit()
             except Exception as exception:
